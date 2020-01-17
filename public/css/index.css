@@ -1,0 +1,25 @@
+
+
+.body-index{  
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.main-index{
+    text-align: center;
+    padding-top: 150px;
+}
+
+.bouton-index{
+    display: flex;
+    width: 20%;
+    margin: 0 auto;
+   justify-content: space-between;
+   font-weight: bold;
+   font-size: 1.2em;
+}
+
+.bouton-index a{
+    color: black;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Accueil bière en stock</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keyword" content="bière">
+        <meta name="description" content="Bière blond, ambrée, brune, blanche, noire. Livraison en 24H.Bière du monde:allemagne,belgique">
+        <!--lien vers la feuille de style-->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    
+        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/inscription.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <!-------ligne en haut------>
+            <div id="top" class="container-fluid ">
+                    <ul class="d-sm-flex justify-content-center font-weight-bold" >
+                        <li><img src="public/images/location.png" alt="" > Rue de Prat Lann 56000 VANNES</li>
+                        <li><img src="public/images/tel.png" alt="" > 02 22 22 22 22</li>
+                        <li><img src="public/images/email.png" alt=""><a href="mailto:name@email.com"> contact@gmail.com</a></li>
+                    </ul> 
+            </div>
+            
+            
+            <div class="container d-flex justify-content-between align-items-end bandeau">
+                <!--------logo--------->
+                <figure class="logo">
+                    <a href="accueil.html"><img src="public/images/logo_c.jpg" alt="logo-bière en stock"></a>
+                    <h1 class="font-weight-bold">La biere du monde</h1>
+                </figure>
+                <!--menuprincipal-->
+                <nav class="menuprincipal">
+                    <input type="checkbox" id="menu-mobile" role="button">
+                    <label for="menu-mobile" class="menu-mobile">
+                        <img src="public/images/menuburger.png" alt="icone-menu-burger">
+                    </label>
+                    <ul id="ctnmenu">
+                        <li><a href="accueil.html" class="choix">Accueil</a></li>
+                        <li><a href="produit.html" class="choix">Produits</a></li>
+                        <li><a href="service.html" class="choix">Services</a></li>
+                        <li><a href="blog.html" class="choix">Blog</a></li>
+                        <li><a href="contact.html" class="choix">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="compte d-flex justify-content-between align-content-end">                
+                    <a href="" class="panier"><img src="public/images/panier_c.png" alt="mon-panier"></a>
+                    <div class="container">
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal" id="btn-compte">
+                                <img src="public/images/compte_c.png" alt="mon-compte">
+                        </button>                       
+                    </div>
+                </div>
+               
+            </div>
+        </header>
+       <!-- The Modal -->
+       <div class="modal" id="myModal">
+            <div class="modal-dialog "> 
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header"  >
+                    <h4 class="modal-title">Connectez-vous</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form>
+                            <label for="nom-utilisateur" class="objet">Nom d'utilisateur</label>
+                            <input type="text" name="nom-utilisateur" placeholder="Votre adresse email"><br>
+                            <label for="password"class="objet" >Mot de passe</label>
+                            <input type="text" name="nom-utilisateur" placeholder="Votre mot de passe"><br>
+                            <a href="#"class="">Vous avez oublié votre nom d'utilisateur ou votre mot de passe ?</a><br>
+                            <a href="inscription.html">Vous n'avez pas vous inscirir ?</a><br>
+                            <input type="submit" value="Connecter" class="bouton-connecter"> 
+                            <input type="reset" value="Annuler" class="bouton-connecter">          
+                        </form>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <main class="container">
+            <h1 class="titre ">Créer un compte</h1>
+            <h2>Informations du compte</h2>
+            <form action="/action_page.php" class="form-inscription">
+                <div class="form-group">
+                    <label for="identifiant">Identifiant</label> <span id="erreuridentifiant"></span>
+                    <input type="text" class="form-control" id="identifiant" required/>
+                    </div>
+                <div class="form-group">
+                  <label for="email">Adresse email</label> <span id="erreuremail"></span>
+                  <input type="email" class="form-control" id="email" required/>
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Mot de passe</label> <span id="erreurpassword"></span>
+                  <input type="password" class="form-control" id="pwd" required/>
+                  
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Confirmez le mot de passe</label>
+                    <input type="password" class="form-control " >
+                    
+                </div>
+                <button type="submit" class="btn btn-outline-light text-dark" id="btn-inscription">Inscrivez</button>
+            </form>
+        
+        </main>
+
+        <footer class="conainer-fluid">
+            <aside class="pied-de-page row bg-secondary ">
+                <div class="bloc-bas col-3">
+                    <p>Aide</p>
+                    <a href="#">Livraison</a><br>
+                    <a href="#">Retour</a><br>
+                    <a href="#">Paiement</a><br>
+                    <a href="#">Conditions générales de ventes</a><br>
+                    <a href="#">Question fréquentes</a><br>                    
+                </div>
+                <div class="bloc-bas col-3">
+                    <p>A propre</p>
+                    <a href="#">Qui sommes-nous?</a><br>
+                    <a href="#">Nous contacter</a><br>
+                    <a href="#">Recrutement</a><br>               
+                </div>
+                <div class="bloc-bas col-3">
+                    <p>Suivez-nous</p>
+                    <a href="#"><img src="public/images/facebook.png" alt="facebook-biere-en-stock"></a>
+                    <a href="#"><img src="public/images/instagram.png" alt="instagram-biere-en-stock"></a>
+                    <a href="#"><img src="public/images/twitter.png" alt="twitter-biere-en-stock"></a>            
+                                    
+                </div>
+            </aside>
+            <aside class="dernier-ligne">
+                <a href="page politique de confid.html">POLITIQUE DE CONFIDENTIALITÉ</a>
+                <a href="plan-du-site.html">Plan du site</a>
+                <nav class="menu-pied">
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="produit.html">Produits</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>     
+                    </ul>
+                </nav>
+            </aside>
+        </footer>
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+       
+    <!--------class active------->
+    <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("ctnmenu");
+        var btns = header.getElementsByClassName("choix");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            if (current.length > 0) { 
+            current[0].className = current[0].className.replace(" active", "");
+            }
+            this.className += " active";
+            });
+        }
+    </script>
+
+   
+    <script src="public/js/inscription.js"></script>
+
+
+    <!------cookie------->
+    <script>
+        let btnyes =  document.getElementById("btnyes");
+        let btnno =  document.getElementById("btnno");
+        let windowCookie = document.getElementById("windowcookie");
+        btnyes.addEventListener("click", myFunction);
+        function myFunction(){
+            windowCookie.style.display = "none";
+        }
+
+        btnno.addEventListener("click", myFunction1);
+        function myFunction1(){
+            window.location.href= "https://www.google.fr";
+        }
+
+    </script>
+
+    
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+
+
+.nofinded{
+    text-align: center;
+    padding-top:25% ;
+    font-size:1.5em
+    font-family:'Montserrat', sans-serif;
+}
+
+.bouton-404{
+    display: block;
+    text-align: center;
+    background-color: rgb(196, 136, 38);
+    width: 300px;
+    margin:30px auto ;
+    line-height: 50px;
+}

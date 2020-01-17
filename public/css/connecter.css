@@ -1,0 +1,47 @@
+.connexion{  
+    border:1px solid rgb(196, 136, 38);
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.connexion p{
+    line-height: 70px;
+    text-align: center;
+    background-color: rgb(196, 136, 38);
+}
+
+.connexion form{
+    line-height: 40px;
+    padding: 20px;
+}
+
+.connexion form label{
+    display: inline-block;
+    width: 150px;    
+}
+
+.connexion form .bouton-connecter{
+    display: inline-block;
+  background-color: rgb(196, 136, 38);
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-size: 1em;
+  margin-left:65px;
+  margin-top: 30px; 
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.connexion form input{
+    height: 30px;
+    width:190px ;
+}
+
+
+
+
+
+

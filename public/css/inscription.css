@@ -1,0 +1,31 @@
+.titre{
+    background-color:rgb(196, 136, 38) ;
+    font-size: 2em;
+    text-align: center;
+    height: 150px;
+    padding-top:60px;
+    margin-bottom: 50px;
+}
+
+h2{
+    font-size: 1.6em;
+    text-align: center;
+}
+
+
+
+.form-inscription{
+    
+    width: 40%;
+    margin: 20px auto;
+    margin-bottom: 50px;
+   
+
+}
+
+#btn-inscription{
+    display: block;
+   margin: 0 auto;
+   background-color: rgb(196, 136, 38);
+
+}

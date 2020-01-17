@@ -1,0 +1,21 @@
+.titre-plandusite{
+    background-color:rgb(196, 136, 38) ;
+    font-size: 1.8em;
+    text-align: center;
+    height: 100px;
+    padding-top:60px;
+    margin-bottom: 50px;
+    color: rgb(69, 69, 69);
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.plan-du-site ul{
+    list-style-type: circle;
+    margin-left: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.5em;
+}
+    

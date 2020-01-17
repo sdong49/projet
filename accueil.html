@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Accueil bière en stock</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keyword" content="bière">
+        <meta name="description" content="Bière blond, ambrée, brune, blanche, noire. Livraison en 24H.Bière du monde:allemagne,belgique">
+        <!--lien vers la feuille de style-->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    
+        <link rel="stylesheet" href="public/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <!-------ligne en haut------>
+            <div id="top" class="container-fluid ">
+                    <ul class="d-sm-flex justify-content-center font-weight-bold" >
+                        <li><img src="public/images/location.png" alt="" > Rue de Prat Lann 56000 VANNES</li>
+                        <li><img src="public/images/tel.png" alt="" > 02 22 22 22 22</li>
+                        <li><img src="public/images/email.png" alt=""><a href="mailto:name@email.com"> contact@gmail.com</a></li>
+                    </ul> 
+            </div>
+            
+            
+            <div class="container d-flex justify-content-between align-items-end bandeau">
+                <!--------logo--------->
+                <figure class="logo">
+                    <a href="accueil.html"><img src="public/images/logo_c.jpg" alt="logo-bière en stock"></a>
+                    <h1 class="font-weight-bold">La biere du monde</h1>
+                </figure>
+                <!--menuprincipal-->
+                <nav class="menuprincipal">
+                    <input type="checkbox" id="menu-mobile" role="button">
+                    <label for="menu-mobile" class="menu-mobile">
+                        <img src="public/images/menuburger.png" alt="icone-menu-burger">
+                    </label>
+                    <ul id="ctnmenu">
+                        <li><a href="accueil.html" class="choix active">Accueil</a></li>
+                        <li><a href="produit.html" class="choix">Produits</a></li>
+                        <li><a href="service.html" class="choix">Services</a></li>
+                        <li><a href="blog.html" class="choix">Blog</a></li>
+                        <li><a href="contact.html" class="choix">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="compte d-flex justify-content-between align-content-end">                
+                    <a href="" class="panier"><img src="public/images/panier_c.png" alt="mon-panier"></a>
+                    <div class="container">
+                        <!-- Button to Open the Modal -->
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal" id="btn-compte">
+                                <img src="public/images/compte_c.png" alt="mon-compte">
+                        </button>                       
+                    </div>
+                </div>
+               
+            </div>
+        </header>       
+       <!-- The Modal -->
+       <div class="modal" id="myModal">t
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header"  >
+                    <h4 class="modal-title">Connectez-vous</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form>
+                            <label for="nom-utilisateur" class="objet">Adresse email</label>
+                            <input type="text" name="nom-utilisateur" placeholder="Votre adresse email" id="emailins" required/><br>
+                            <span id="erreuremailins"></span><br>
+                            <label for="password"class="objet" >Mot de passe</label>
+                            <input type="password" name="password" placeholder="Votre mot de passe" id="pwd" required/><br>
+                            <span id="erreurpasswordins"></span><br>
+                            <a href="#"class="">Vous avez oublié votre nom d'utilisateur ou votre mot de passe ?</a><br>
+                            <a href="inscription.html">Vous n'avez pas vous inscirit ?</a><br>
+                            <input type="submit" value="Connecter" class="bouton-connecter" id="btn-connecter"> 
+                            <input type="reset" value="Annuler" class="bouton-connecter">          
+                        </form>
+                    </div>    
+                </div>
+            </div>
+        </div>
+        <main class="container">
+            <!-----------slider-------------->     
+            <div id="slider">
+                <button id="left-arrow">
+                    <
+                </button>
+                <div id="wrapper"> 
+                    
+                </div>
+                <button id="right-arrow">
+                    >
+                </button>
+            </div>
+            <!------------produit--------------->
+            <section class="produit mb-5">
+                <h2 class="text-center font-weight-bold">Nos produits</h2>
+                <div class="types-produit row mt-5">
+                    <article class="col-lg-3 col-sm-6 col-12  text-center type">
+                            <img src="public/images/bouteille.png" alt="" class="img-fluid photo-titre">                       
+                            <a href="#"class="bouton-info"><div class="mask"><span class="pl-3 pr-3 text-body ">Bouteilles</span></div></a>                   
+                    </article>
+                    <article class="col-lg-3 col-sm-6 col-12  text-center type">
+                                <img src="public/images/fut.png" alt="photo-titre2" class="img-fluid photo-titre">                       
+                                <a href="#"class="bouton-info"><div class="mask"><span class="pl-5 pr-5 text-body ">Fûts</span></div></a>                  
+                    </article>
+                    <article class="col-lg-3 col-sm-6 col-12  text-center type">
+                                <img src="public/images/assortiment.png" alt="photo-titre2" class="img-fluid photo-titre">                       
+                                <a href="#"class="bouton-info"><div class="text-center font-weight-bold mask"><span class="text-body ">Assortiments</span></div></a>                    
+                    </article>               
+                    <article class="col-lg-3 col-sm-6 col-12  text-center type">        
+                                <img src="public/images/tireuse.png" alt="photo-titre2" class="img-fluid photo-titre">                       
+                                <a href="#"class="bouton-info"><div class="font-weight-bold mask"><span class="pl-5 pr-5 text-body ">Tireuse</span></div></a>                    
+                    </article>
+                </div>
+            </section>
+            <sectiion class="les-actus">
+                <h2 class="text-center font-weight-bold">Découvrez le monde de la bière</h2>
+                <div class="row mt-5">
+                    <article class="col-lg-6 col-sm-12">
+                        <div class="bloc-actu">
+                                <h4>Titre 1</h4>
+                                <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+                                    Nam eu neque  
+                                    <br>
+                                    <button type="button" class="btn btn-link text-body mt-5" id="btn-actu">Je découvre</button>               
+                                </p>            
+                        </div> 
+                        <div class="media mb-5">
+                                <iframe class="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/sE-0MgA2Uy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </article>
+                    <article class="col-lg-6 col-sm-12">    
+                        <div class="bloc-actu">
+                            <h4>Titre 2</h4>
+                            <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Quisque sapien velit, aliquet eget commodo nec, auctor a sapien. 
+                                Nam eu neque
+                                <br>
+                                <button type="button" class="btn btn-link text-body mt-5" id="btn-actu">Je découvre</button>
+                            </p>            
+                        </div> 
+                        <div class=" media">              
+                            <iframe class="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/KTXJgWHD8gc" ></iframe>   
+                        </div>                    
+                    </article>
+                </div>       
+            </sectiion>
+            <div id = "windowcookie">
+                <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation 
+                    de cookies qui nous permettent de vous proposer une navigation optimale et
+                    de réaliser des statistiques de visite.
+                </p>  
+                <div class="btn-cookie">
+                    <button id="btnyes">Oui</button>
+                    <button id="btnno">Non</button>
+                </div>
+                
+            </div>
+        </main>
+
+        <footer class="conainer-fluid">
+            <aside class="pied-de-page row bg-secondary ">
+                <div class="bloc-bas col-3">
+                    <p>Aide</p>
+                    <a href="#">Livraison</a><br>
+                    <a href="#">Retour</a><br>
+                    <a href="#">Paiement</a><br>
+                    <a href="#">Conditions générales de ventes</a><br>
+                    <a href="#">Question fréquentes</a><br>                    
+                </div>
+                <div class="bloc-bas col-3">
+                    <p>A propre</p>
+                    <a href="#">Qui sommes-nous?</a><br>
+                    <a href="#">Nous contacter</a><br>
+                    <a href="#">Recrutement</a><br>               
+                </div>
+                <div class="bloc-bas col-3">
+                    <p>Suivez-nous</p>
+                    <a href="#"><img src="public/images/facebook.png" alt="facebook-biere-en-stock"></a>
+                    <a href="#"><img src="public/images/instagram.png" alt="instagram-biere-en-stock"></a>
+                    <a href="#"><img src="public/images/twitter.png" alt="twitter-biere-en-stock"></a>            
+                                    
+                </div>
+            </aside>
+            <aside class="dernier-ligne">
+                <a href="page politique de confid.html">POLITIQUE DE CONFIDENTIALITÉ</a>
+                <a href="plan-du-site.html">Plan du site</a>
+                <nav class="menu-pied">
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="produit.html">Produits</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>     
+                    </ul>
+                </nav>
+            </aside>
+        </footer>
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!------js slider------>
+    <script type="text/javascript" src="public/js/slider.js"></script>      
+    
+    <!--------class active------->
+    <script>
+        // Add active class to the current button (highlight it)
+        var menuctn= document.getElementById("ctnmenu");
+        var btns = menuctn.getElementsByClassName("choix");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            });
+            }
+    </script>
+
+    <!----regex connexion------>
+    <script src="public/js/connexion.js"></script>
+   
+    <!------cookie------->
+    <script>
+        let btnyes =  document.getElementById("btnyes");
+        let btnno =  document.getElementById("btnno");
+        let windowCookie = document.getElementById("windowcookie");
+        btnyes.addEventListener("click", myFunction);
+        function myFunction(){
+			sessionStorage.setItem( 'cookieOK', 'true' );
+            windowCookie.style.display = "none";
+        }
+		if (sessionStorage.getItem( 'cookieOK' ) == 'true' ) {
+			windowCookie.style.display = "none";
+		}
+        btnno.addEventListener("click", myFunction1);
+        function myFunction1(){
+            window.location.href= "https://www.google.fr";
+        }
+
+    </script>
+
+    
+
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Blog bière en stock</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keyword" content="bière">
+        <meta name="description" content="blog biere en stock">
+        <!--lien vers la feuille de style-->
+        <link rel="stylesheet" href="public/css/style.css"type="text/css" media="screen" >  
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!----haut de la page----->
+        <header>
+            <div class="haut">    
+                <ul class="contact-header">
+                    <li><img src="public/images/location.png" alt="" > Rue de Prat Lann 56000 VANNES</li>
+                    <li><img src="public/images/tel.png" alt="" > 02 22 22 22 22</li>
+                    <li><img src="public/images/email.png" alt=""><a href="mailto:name@email.com"> contact@gmail.com</a></li>
+                </ul> 
+            </div> 
+            <div class="bandeau">
+                <figure class="logo">
+                    <a href="accueil.html"><img src="public/images/logo_c.jpg" alt="logo-bière en stock"></a>
+                    <h1>La biere du monde</h1>
+                </figure>
+                <!--menuprincipal-->
+                <nav class="menuprincipal">
+                    <input type="checkbox" id="menu-mobile" role="button">
+                    <label for="menu-mobile" class="menu-mobile">
+                        <img src="public/images/menuburger.png" alt="icone-menu-burger">
+                    </label>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produit.html">Produits</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="blog.html" class="choix">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="compte">                
+                    <a href=""><img src="public/images/panier_c.png" alt="mon-panier"></a>
+                    <a href="connecter.html"><img src="public/images/compte_c.png" alt="mon-compte"></a>
+                    <img src="public/images/loupe_c.png" alt="bouton-recherche" id="bouton-recherche">
+                </div>
+                <form>
+                    <input type="search" id="recherche" >
+                </form>
+            </div>
+        </header>
+        <main class="container">          
+        </main>
+        <footer>
+            <section class="pied-de-page">
+                <article class="aide">
+                    <p>Aide</p>
+                    <a href="#">Livraison</a><br>
+                    <a href="#">Retour</a><br>
+                    <a href="#">Paiement</a><br>
+                    <a href="#">Conditions générales de ventes</a><br>
+                    <a href="#">Question fréquentes</a><br>                    
+                </article>
+                <article class="a-propre">
+                    <P>A propre<P>
+                    <a href="#">Qui sommes-nous?</a><br>
+                    <a href="#">Nous contacter</a><br>
+                    <a href="#">Recrutement</a><br>               
+                </article>
+                <article class="reseaux-sociaux">
+                    <p>Suivez-nous</p>
+                    
+                        <a href="#"><img src="public/images/facebook.png" alt="facebook-biere-en-stock"></a>
+                        <a href="#"><img src="public/images/instagram.png" alt="instagram-biere-en-stock"></a>
+                        <a href="#"><img src="public/images/twitter.png" alt="twitter-biere-en-stock"></a>            
+                                    
+                </article>
+            </section>
+            <section class="dernier-ligne">
+                <a href="page politique de confid.html">POLITIQUE DE CONFIDENTIALITÉ</a>
+                <a href="plan-du-site.html">Plan du site</a>
+                <nav class="menu-pied">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>     
+                    </ul>
+                </nav>
+            </section>
+        </footer>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script>
+        $("#bouton-recherche").click(function () {
+        $("#recherche").toggle();
+        });
+        </script>
+    </body>
+</html> 
