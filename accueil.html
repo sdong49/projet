@@ -235,8 +235,8 @@
     <!--------class active------->
     <script>
         // Add active class to the current button (highlight it)
-        var menuctn = document.getElementById("ctnmenu");
-        var btns = menuctn.getElementsByClassName("choix");
+        var menuMenu = document.getElementById("ctnmenu");
+        var btns = menuMenu.getElementsByClassName("choix");
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function () {
                 var current = document.getElementsByClassName("active");
