@@ -5,34 +5,43 @@ let identifiant = document.getElementById("identifiant");
 let errorid = document.getElementById("erreuridentifiant");
 let regexid = /^[\wàáâäçèéêëìíîïñòóôöùúûü-]{5,10}$/
 
-envoi.addEventListener("click",confirmid);
+let email = document.getElementById("email")
+let erroremail = document.getElementById("erreuremail")
+let regexemail = /^[\w-.]+@[\w-.]+((\.com)|(\.fr))$/
 
-function confirmid(event){
+let password = document.getElementById("pwd")
+let errorpassword = document.getElementById("erreurpassword")
+let regexpwd = /^(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).*$/
+
+
+envoi.addEventListener("click", confirmall)
+
+function confirmall(event){
+    confirm(identifiant,errorid,regexid,event);
+    confirm(email,erroremail,regexemail,event);
+    confirm(password,errorpassword,regexpwd,event);
+}
+
+function confirm(val,errorVal,regexpVal,event){
     
-    if (identifiant.validity.valueMissing){
+    if (val.validity.valueMissing || regexpVal.test(val.value) == false){
         event.preventDefault();
-        errorid.textContent = "Champ obligatoire";
-        errorid.style.color = "red";
-        errorid.style.fontSize = "0.8em";
+        let text = val.validity.valueMissing ? "Champ obligatoire" : "Format incorrect";
+        errorVal.innerHTML = text;
+        errorVal.style.color = "red";
+        errorVal.style.fontSize = "0.8em";
 
         
-    }else if(!regexid.test(identifiant.value)){
-        
+    } else {
         event.preventDefault();
-        errorid.textContent = 'Format incorrect';
-        errorid.style.color = 'red';
-        errorid.style.fontSize = "0.8em";
-    }
-    else{
-        event.preventDefault();
-        errorid.textContent = '';
+        errorVal.textContent = "";
     }
 
 }
 
 
 
-let email = document.getElementById("email")
+/*let email = document.getElementById("email")
 let erroremail = document.getElementById("erreuremail")
 let regexemail = /^[\w-.]+@[\w-.]+((\.com)|(\.fr))$/
 
@@ -84,7 +93,7 @@ function confirmpwd(event){
         event.preventDefault();
         errorpassword.textContent = '';
     }
-}
+}*/
 
 
 

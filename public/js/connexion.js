@@ -4,7 +4,12 @@ let emailins = document.getElementById("emailins")
 let erroremailins = document.getElementById("erreuremailins")
 let regexemailins = /^[\w-.]+@[\w-.]+((\.com)|(\.fr))$/
 
-envoi.addEventListener("click", confirmemailins)
+envoi.addEventListener("click", confirmall)
+
+function confirmall(event){
+    confirm(emailins,erroremailins,regexemailins,event);
+    confirm(password,errorpassword,)
+}
 
 function confirmemailins(event){
 
