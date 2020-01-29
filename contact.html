@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Accueil bière en stock</title>
+        <title>Contactez-nous</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="public/css/style.css">
         <link rel="stylesheet" href="public/css/contact.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="public/js/creds.js"></script>
+        <script type="text/javascript" src="public/js/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -142,7 +144,7 @@
                             </div> 
                         <p class="message">
                                 <label for="message">Votre message*</label>
-                                <textarea name="message" rows="10" ></textarea>
+                                <textarea name="message" rows="10" id="message"></textarea>
                         </p>
                     </fieldset>
                     <p>
@@ -152,7 +154,7 @@
                         « N° de commande » du formulaire.
                     </p>
                     <p class="bouton-contact">
-                        <input type="submit" value="Envoyer" id="btnenvoi"> 
+                        <input type="submit" value="Envoyer" id="btnenvoi" onclick="sendMessage()"> 
                         <input type="reset" value="Annuler" id="btn-annulation">
                     </p>
                 </form>
@@ -175,7 +177,7 @@
         </main>
 
         <footer class="conainer-fluid">
-            <aside class="pied-de-page row bg-secondary ">
+            <aside class="pied-de-page row bg-secondary pt-5 pb-5">
                 <div class="bloc-bas col-3">
                     <p>Aide</p>
                     <a href="#">Livraison</a><br>
@@ -212,11 +214,9 @@
                 </nav>
             </aside>
         </footer>
-        <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      
+    
+    
            
     <!--------class active------->
     <script>
@@ -256,6 +256,34 @@
         }
 
     </script>
+
+<script>
+
+    function sendMessage(){
+        let message = document.getElementById("message").value
+        let data = {
+        "text":message,
+        "channel":"#bot",
+        "token": creds.token
+    }
+
+    $.ajax({
+        url:"https://slack.com/api/chat.postMessage",
+        type:"POST",
+        data: data,
+        dataType:"text"
+    }).done(function(reponse){
+        console.log(reponse)
+
+    }).fail(function(error){
+        alert("error")
+        console.log(error)
+    })
+
+    };
+
+</script>
+
 
     </body>
 </html>
