@@ -1,1 +1,1 @@
-let creds = {token:"xoxb-927065497526-924897727744-2FcKFFrfhWe6JFjwR5nGeu0k"}
+let creds = {token:"xoxb-927065497526-924897727744-ggXEuuiYcaWMx9n1dsTp9Wab"}
